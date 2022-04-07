@@ -1,13 +1,13 @@
-import React, { useEffect } from "react";
-import capsule_img_landscape from "../../assets/images/technology/image-space-capsule-landscape.jpg";
-import capsule_img_portrait from "../../assets/images/technology/image-space-capsule-portrait.jpg";
+import React, { useEffect } from 'react';
+import capsule_img_landscape from '../../assets/images/technology/image-space-capsule-landscape.webp';
+import capsule_img_portrait from '../../assets/images/technology/image-space-capsule-portrait.webp';
 
 const SpaceCapsule = ({ setTechnologyImg }) => {
 	useEffect(() => {
 		setTechnologyImg({
 			landscape: capsule_img_landscape,
 			portrait: capsule_img_portrait,
-			alt: "Dragon Capsule",
+			alt: 'Dragon Capsule',
 		});
 	}, [setTechnologyImg]);
 

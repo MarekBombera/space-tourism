@@ -1,30 +1,30 @@
-import React, { useState } from "react";
-import LaunchVehicle from "./LaunchVehicle";
-import Spaceport from "./Spaceport";
-import SpaceCapsule from "./SpaceCapsule";
+import React, { useState } from 'react';
+import LaunchVehicle from './LaunchVehicle';
+import Spaceport from './Spaceport';
+import SpaceCapsule from './SpaceCapsule';
 
-import activeSlider from "../../utils/activeSlider";
-import useMediaQueryMatch from "../../hooks/useMediaQueryMatch";
+import activeSlider from '../../utils/activeSlider';
+import useMediaQueryMatch from '../../hooks/useMediaQueryMatch';
 
-import vehicle_img_landscape from "../../assets/images/technology/image-launch-vehicle-landscape.jpg";
-import vehicle_img_portrait from "../../assets/images/technology/image-launch-vehicle-portrait.jpg";
+import vehicle_img_landscape from '../../assets/images/technology/image-launch-vehicle-landscape.webp';
+import vehicle_img_portrait from '../../assets/images/technology/image-launch-vehicle-portrait.webp';
 
 const Technology = () => {
-	const [technology, setTechnology] = useState("launchVehicle");
+	const [technology, setTechnology] = useState('launchVehicle');
 	const [technologyImg, setTechnologyImg] = useState({
 		landscape: vehicle_img_landscape,
 		portrait: vehicle_img_portrait,
 	});
 
-	document.body.className = "technology-bg-img";
+	document.body.className = 'technology-bg-img';
 
 	const changeTechnology = () => {
 		switch (technology) {
-			case "launchVehicle":
+			case 'launchVehicle':
 				return <LaunchVehicle setTechnologyImg={setTechnologyImg} />;
-			case "spaceport":
+			case 'spaceport':
 				return <Spaceport setTechnologyImg={setTechnologyImg} />;
-			case "spaceCapsule":
+			case 'spaceCapsule':
 				return <SpaceCapsule setTechnologyImg={setTechnologyImg} />;
 
 			default:
@@ -41,15 +41,15 @@ const Technology = () => {
 				</div>
 				<div className="technology__main">
 					<div className="technology__img">
-						{useMediaQueryMatch("desktop") ? (
+						{useMediaQueryMatch('desktop') ? (
 							<img
 								src={technologyImg.portrait}
-								alt={technologyImg.alt ? technologyImg.alt : ""}
+								alt={technologyImg.alt ? technologyImg.alt : ''}
 							/>
 						) : (
 							<img
 								src={technologyImg.landscape}
-								alt={technologyImg.alt ? technologyImg.alt : ""}
+								alt={technologyImg.alt ? technologyImg.alt : ''}
 							/>
 						)}
 					</div>
@@ -57,23 +57,23 @@ const Technology = () => {
 					<div className="technology__content">
 						<div
 							className="technology__navigation"
-							onClick={(e) => activeSlider(e, "technology")}
+							onClick={(e) => activeSlider(e, 'technology')}
 						>
 							<span
 								className="technology__navigation-slider technology__navigation-slider--active"
-								onClick={() => setTechnology("launchVehicle")}
+								onClick={() => setTechnology('launchVehicle')}
 							>
 								1
 							</span>
 							<span
 								className="technology__navigation-slider"
-								onClick={() => setTechnology("spaceport")}
+								onClick={() => setTechnology('spaceport')}
 							>
 								2
 							</span>
 							<span
 								className="technology__navigation-slider"
-								onClick={() => setTechnology("spaceCapsule")}
+								onClick={() => setTechnology('spaceCapsule')}
 							>
 								3
 							</span>

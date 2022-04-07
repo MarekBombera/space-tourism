@@ -1,13 +1,13 @@
-import React, { useEffect } from "react";
-import spaceport_img_landscape from "../../assets/images/technology/image-spaceport-landscape.jpg";
-import spaceport_img_portrait from "../../assets/images/technology/image-spaceport-portrait.jpg";
+import React, { useEffect } from 'react';
+import spaceport_img_landscape from '../../assets/images/technology/image-spaceport-landscape.webp';
+import spaceport_img_portrait from '../../assets/images/technology/image-spaceport-portrait.webp';
 
 const Spaceport = ({ setTechnologyImg }) => {
 	useEffect(() => {
 		setTechnologyImg({
 			landscape: spaceport_img_landscape,
 			portrait: spaceport_img_portrait,
-			alt: "Spaceport at Cape Canaveral",
+			alt: 'Spaceport at Cape Canaveral',
 		});
 	}, [setTechnologyImg]);
 

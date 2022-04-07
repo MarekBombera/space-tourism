@@ -1,13 +1,13 @@
-import React, { useEffect } from "react";
-import vehicle_img_landscape from "../../assets/images/technology/image-launch-vehicle-landscape.jpg";
-import vehicle_img_portrait from "../../assets/images/technology/image-launch-vehicle-portrait.jpg";
+import React, { useEffect } from 'react';
+import vehicle_img_landscape from '../../assets/images/technology/image-launch-vehicle-landscape.webp';
+import vehicle_img_portrait from '../../assets/images/technology/image-launch-vehicle-portrait.webp';
 
 const LaunchVehicle = ({ setTechnologyImg }) => {
 	useEffect(() => {
 		setTechnologyImg({
 			landscape: vehicle_img_landscape,
 			portrait: vehicle_img_portrait,
-			alt: "WEB-X carrier rocket",
+			alt: 'WEB-X carrier rocket',
 		});
 	}, [setTechnologyImg]);
 
