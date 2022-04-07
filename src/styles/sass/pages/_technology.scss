@@ -1,16 +1,16 @@
 @use "../base/breakpoints" as *;
 
 .technology-bg-img {
-	background-image: url("../../images/technology/background-technology-mobile.jpg");
+	background-image: url("../../assets/images/technology/background-technology-mobile.jpg");
 	background-size: cover;
 	background-repeat: no-repeat;
 
 	@include media(">=tablet") {
-		background-image: url("../../images/technology/background-technology-tablet.jpg");
+		background-image: url("../../assets/images/technology/background-technology-tablet.jpg");
 	}
 
 	@include media(">=desktop") {
-		background-image: url("../../images/technology/background-technology-desktop.jpg");
+		background-image: url("../../assets/images/technology/background-technology-desktop.jpg");
 	}
 }
 
@@ -74,7 +74,7 @@
 		margin: 1rem 0 2rem;
 
 		@include media(">=desktop") {
-			margin: 0;
+			margin: 0 5rem 5rem 0;
 		}
 
 		@include media(">=LGdesktop") {

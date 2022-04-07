@@ -1,16 +1,16 @@
 @use "../base/breakpoints" as *;
 
 .homepage-bg-img {
-	background-image: url("../../images/homepage/background-home-mobile.jpg");
+	background-image: url("../../assets/images/homepage/background-home-mobile.jpg");
 	background-size: cover;
 	background-repeat: no-repeat;
 
 	@include media(">=tablet") {
-		background-image: url("../../images/homepage/background-home-tablet.jpg");
+		background-image: url("../../assets/images/homepage/background-home-tablet.jpg");
 	}
 
 	@include media(">=desktop") {
-		background-image: url("../../images/homepage/background-home-desktop.jpg");
+		background-image: url("../../assets/images/homepage/background-home-desktop.jpg");
 	}
 }
 
@@ -27,7 +27,7 @@
 
 	@include media(">=desktop") {
 		flex-direction: row;
-		margin: 13rem 10.5rem 0;
+		margin: 7rem 10.5rem 0;
 		gap: 25rem;
 	}
 
@@ -60,6 +60,11 @@
 			}
 
 			@include media(">=desktop") {
+				font-size: 1.6rem;
+				letter-spacing: 4.725px;
+			}
+
+			@include media(">=LGdesktop") {
 				font-size: 1.75rem;
 				letter-spacing: 4.725px;
 			}
@@ -74,6 +79,14 @@
 			font-size: 5rem;
 
 			@include media(">=tablet") {
+				font-size: 9.375rem;
+			}
+
+			@include media(">=desktop") {
+				font-size: 9rem;
+			}
+
+			@include media(">=LGdesktop") {
 				font-size: 9.375rem;
 			}
 		}
@@ -124,7 +137,7 @@
 		}
 
 		@include media(">=desktop") {
-			margin-top: 0;
+			margin-top: 3rem;
 			width: 274px;
 			height: 274px;
 

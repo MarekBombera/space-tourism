@@ -1,16 +1,16 @@
 @use "../base/breakpoints" as *;
 
 .crew-bg-img {
-	background-image: url("../../images/crew/background-crew-mobile.jpg");
+	background-image: url("../../assets/images/crew/background-crew-mobile.jpg");
 	background-size: cover;
 	background-repeat: no-repeat;
 
 	@include media(">=tablet") {
-		background-image: url("../../images/crew/background-crew-tablet.jpg");
+		background-image: url("../../assets/images/crew/background-crew-tablet.jpg");
 	}
 
 	@include media(">=desktop") {
-		background-image: url("../../images/crew/background-crew-desktop.jpg");
+		background-image: url("../../assets/images/crew/background-crew-desktop.jpg");
 	}
 }
 

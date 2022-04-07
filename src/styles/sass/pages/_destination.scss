@@ -1,16 +1,16 @@
 @use "../base/breakpoints" as *;
 
 .destination-bg-img {
-	background-image: url("../../images/destination/background-destination-mobile.jpg");
+	background-image: url("../../assets/images/destination/background-destination-mobile.jpg");
 	background-size: cover;
 	background-repeat: no-repeat;
 
 	@include media(">=tablet") {
-		background-image: url("../../images/destination/background-destination-tablet.jpg");
+		background-image: url("../../assets/images/destination/background-destination-tablet.jpg");
 	}
 
 	@include media(">=desktop") {
-		background-image: url("../../images/destination/background-destination-desktop.jpg");
+		background-image: url("../../assets/images/destination/background-destination-desktop.jpg");
 	}
 }
 

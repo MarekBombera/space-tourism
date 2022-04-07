@@ -1,11 +1,11 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 
-import MobileNavigation from '../../components/MobileNavigation';
-import Navigation from '../../components/Navigation';
-import useMediaQueryMatch from '../../hooks/useMediaQueryMatch';
+import MobileNavigation from './MobileNavigation';
+import Navigation from './Navigation';
+import useMediaQueryMatch from '../hooks/useMediaQueryMatch';
 
-import logo from '../../assets/images/shared/logo.svg';
+import logo from '../assets/images/shared/logo.svg';
 
 const Header = () => {
 	return (
