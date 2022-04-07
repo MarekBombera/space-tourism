@@ -1,0 +1,251 @@
+@use "../base/breakpoints" as *;
+
+.technology-bg-img {
+	background-image: url("../../images/technology/background-technology-mobile.jpg");
+	background-size: cover;
+	background-repeat: no-repeat;
+
+	@include media(">=tablet") {
+		background-image: url("../../images/technology/background-technology-tablet.jpg");
+	}
+
+	@include media(">=desktop") {
+		background-image: url("../../images/technology/background-technology-desktop.jpg");
+	}
+}
+
+.technology {
+	&__subheading {
+		display: flex;
+		justify-content: center;
+
+		@include media(">=tablet") {
+			justify-content: flex-start;
+			margin: 2rem;
+		}
+
+		@include media(">=desktop") {
+			margin: 2rem 10rem 0;
+		}
+
+		.page-number {
+			margin-right: 1rem;
+			opacity: 0.25;
+			font-weight: bold;
+			letter-spacing: 2.7px;
+			color: rgb(255, 255, 255);
+
+			@include media(">=tablet") {
+				font-size: 1.25rem;
+				letter-spacing: 3.375px;
+			}
+
+			@include media(">=desktop") {
+				font-size: 1.75rem;
+				letter-spacing: 4.725px;
+			}
+		}
+
+		.subheading {
+			text-transform: uppercase;
+			letter-spacing: 2.7px;
+			color: rgb(255, 255, 255);
+
+			@include media(">=tablet") {
+				font-size: 1.25rem;
+				letter-spacing: 3.375px;
+			}
+
+			@include media(">=desktop") {
+				font-size: 1.75rem;
+				letter-spacing: 4.725px;
+			}
+		}
+	}
+
+	&__main {
+		@include media(">=desktop") {
+			display: flex;
+			flex-direction: row-reverse;
+		}
+	}
+
+	&__img {
+		margin: 1rem 0 2rem;
+
+		@include media(">=desktop") {
+			margin: 0;
+		}
+
+		@include media(">=LGdesktop") {
+			margin-right: 8rem;
+		}
+
+		img {
+			width: 100.8%;
+			height: 170px;
+			object-fit: cover;
+
+			@include media(">=tablet") {
+				height: 310px;
+			}
+
+			@include media(">=desktop") {
+				width: 515px;
+				height: 527px;
+			}
+
+			@include media(">=LGdesktop") {
+				width: 575px;
+				height: 587px;
+			}
+		}
+	}
+
+	&__content {
+		@include media(">=desktop") {
+			display: flex;
+			margin: 6rem 0 0 10rem;
+			gap: 5rem;
+		}
+	}
+
+	&__navigation {
+		display: flex;
+		justify-content: center;
+		gap: 1.5rem;
+
+		@include media(">=desktop") {
+			flex-direction: column;
+			justify-content: flex-start;
+			gap: 2.5rem;
+		}
+
+		&-slider {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			width: 40px;
+			height: 40px;
+			color: rgb(255, 255, 255);
+			border: 1px solid rgb(255, 255, 255, 0.25);
+			border-radius: 50%;
+
+			@include media(">=tablet") {
+				width: 60px;
+				height: 60px;
+			}
+
+			@include media(">=desktop") {
+				width: 80px;
+				height: 80px;
+				font-size: 2rem;
+				transition: all 0.5s ease;
+
+				&:hover:not(.technology__navigation-slider--active) {
+					cursor: pointer;
+					color: rgb(0, 0, 0);
+					background: rgb(255, 255, 255, 0.5);
+				}
+			}
+
+			&--active {
+				color: rgb(0, 0, 0);
+				background: rgb(255, 255, 255);
+			}
+		}
+	}
+
+	&__terminology {
+		margin-top: 2rem;
+
+		@include media(">=tablet") {
+			margin-top: 3rem;
+		}
+
+		@include media(">=desktop") {
+			margin-top: 0;
+		}
+
+		.subheading {
+			text-transform: uppercase;
+			font-weight: normal;
+			text-align: center;
+			font-size: 0.875rem;
+			letter-spacing: 2.3625px;
+
+			@include media(">=tablet") {
+				font-size: 1rem;
+				letter-spacing: 2.7px;
+			}
+
+			@include media(">=desktop") {
+				margin-top: 0;
+			}
+		}
+	}
+
+	&__heading {
+		.heading {
+			margin: 0;
+			font-size: 1.5rem;
+			font-weight: normal;
+			text-transform: uppercase;
+
+			@include media(">=tablet") {
+				font-size: 2.5rem;
+			}
+
+			@include media(">=desktop") {
+				font-size: 3.5rem;
+			}
+		}
+	}
+
+	&__body {
+		margin-top: 1rem;
+		width: 86%;
+
+		@include media(">=tablet") {
+			width: 57%;
+		}
+
+		@include media(">=desktop") {
+			width: 72%;
+		}
+
+		@include media(">=LGdesktop") {
+			width: 62%;
+		}
+
+		.body {
+			text-align: center;
+			font-size: 0.9375rem;
+			line-height: 25px;
+
+			@include media(">=tablet") {
+				font-size: 1rem;
+				line-height: 28px;
+			}
+
+			@include media(">=desktop") {
+				text-align: left;
+				font-size: 1.125rem;
+				line-height: 32px;
+			}
+		}
+	}
+}
+
+.launch-vehicle,
+.spaceport,
+.space-capsule {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin-bottom: 1rem;
+
+	@include media(">=desktop") {
+		align-items: start;
+	}
+}

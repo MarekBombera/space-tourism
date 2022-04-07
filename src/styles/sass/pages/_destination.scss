@@ -1,0 +1,262 @@
+@use "../base/breakpoints" as *;
+
+.destination-bg-img {
+	background-image: url("../../images/destination/background-destination-mobile.jpg");
+	background-size: cover;
+	background-repeat: no-repeat;
+
+	@include media(">=tablet") {
+		background-image: url("../../images/destination/background-destination-tablet.jpg");
+	}
+
+	@include media(">=desktop") {
+		background-image: url("../../images/destination/background-destination-desktop.jpg");
+	}
+}
+
+.destination {
+	&__subheading {
+		display: flex;
+		justify-content: center;
+
+		@include media(">=tablet") {
+			justify-content: flex-start;
+			margin: 2rem;
+		}
+
+		@include media(">=desktop") {
+			margin: 2rem 10rem 0;
+		}
+
+		.page-number {
+			margin-right: 1rem;
+			opacity: 0.25;
+			font-weight: bold;
+			letter-spacing: 2.7px;
+			color: rgb(255, 255, 255);
+
+			@include media(">=tablet") {
+				font-size: 1.25rem;
+				letter-spacing: 3.375px;
+			}
+
+			@include media(">=desktop") {
+				font-size: 1.75rem;
+				letter-spacing: 4.725px;
+			}
+		}
+
+		.subheading {
+			text-transform: uppercase;
+			letter-spacing: 2.7px;
+			color: rgb(255, 255, 255);
+
+			@include media(">=tablet") {
+				font-size: 1.25rem;
+				letter-spacing: 3.375px;
+			}
+
+			@include media(">=desktop") {
+				font-size: 1.75rem;
+				letter-spacing: 4.725px;
+			}
+		}
+	}
+
+	&__main {
+		@include media(">=desktop") {
+			display: flex;
+			gap: 5rem;
+		}
+	}
+
+	&__planet-img {
+		display: flex;
+		justify-content: center;
+		margin: 1rem 0;
+
+		@include media(">=desktop") {
+			width: 50%;
+		}
+
+		@include media(">=desktop") {
+			margin-left: 11rem;
+		}
+
+		img {
+			width: 170px;
+			height: 170px;
+
+			@include media(">=tablet") {
+				margin: 1.5rem 0;
+				width: 300px;
+				height: 300px;
+			}
+
+			@include media(">=desktop") {
+				width: 445px;
+				height: 445px;
+			}
+		}
+	}
+
+	&__content {
+		@include media(">=desktop") {
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			width: 50%;
+			margin: 0 5rem;
+		}
+	}
+
+	&__navigation {
+		display: flex;
+		justify-content: center;
+		margin: 2rem 0 1.5rem;
+		gap: 1.5rem;
+
+		@include media(">=tablet") {
+			gap: 2.5rem;
+		}
+
+		@include media(">=desktop") {
+			margin: 0 0 1rem;
+		}
+
+		.subheading {
+			margin-bottom: 0;
+			padding-bottom: 0.5rem;
+			text-transform: uppercase;
+			font-size: 0.875rem;
+			letter-spacing: 2.3625px;
+
+			@include media(">=tablet") {
+				font-size: 1rem;
+				letter-spacing: 2.7px;
+			}
+		}
+
+		&-slider {
+			&--active {
+				border-bottom: 3px solid white;
+			}
+
+			@include media(">=desktop") {
+				&:hover:not(.destination__navigation-slider--active) {
+					border-bottom: 3px solid rgb(255, 255, 255, 0.5);
+					cursor: pointer;
+				}
+
+				&--active {
+					cursor: pointer;
+				}
+			}
+		}
+	}
+
+	&__heading {
+		.heading {
+			margin: 0;
+			text-transform: uppercase;
+			font-weight: normal;
+			font-size: 3.5rem;
+
+			@include media(">=tablet") {
+				font-size: 5rem;
+			}
+
+			@include media(">=desktop") {
+				font-size: 6.25rem;
+			}
+		}
+	}
+
+	&__body {
+		width: 85%;
+		padding-bottom: 1rem;
+		border-bottom: 1px solid var(--gray-blue-color);
+
+		@include media(">=tablet") {
+			width: 75%;
+		}
+
+		@include media(">=desktop") {
+			width: 90%;
+		}
+
+		@include media(">=LGdesktop") {
+			width: 66%;
+		}
+
+		.body {
+			text-align: center;
+			font-size: 0.9375rem;
+			line-height: 25px;
+
+			@include media(">=tablet") {
+				font-size: 1rem;
+				line-height: 28px;
+			}
+
+			@include media(">=desktop") {
+				text-align: left;
+				font-size: 1.125rem;
+				line-height: 32px;
+			}
+		}
+	}
+
+	&__otherInfo {
+		@include media(">=tablet") {
+			display: flex;
+			gap: 7rem;
+		}
+
+		@include media(">=desktop") {
+			display: flex;
+			gap: 4rem;
+		}
+	}
+
+	&__distance,
+	&__travelTime {
+		text-transform: uppercase;
+		text-align: center;
+
+		@include media(">=desktop") {
+			text-align: left;
+		}
+
+		.subheading {
+			margin-top: 2rem;
+			font-size: 0.875rem;
+			letter-spacing: 2.3625px;
+		}
+
+		.heading {
+			margin: 0;
+			font-weight: normal;
+			font-size: 1.75rem;
+			letter-spacing: 2.3625px;
+		}
+	}
+}
+
+.moon,
+.mars,
+.europa,
+.titan {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin: 1rem 0 2rem;
+
+	@include media(">=tablet") {
+		margin: 1rem 0 2rem;
+	}
+
+	@include media(">=desktop") {
+		align-items: flex-start;
+	}
+}

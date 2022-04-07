@@ -1,0 +1,62 @@
+@use "../base/breakpoints" as *;
+
+.NavLink {
+	&--no-default-style {
+		text-decoration: none;
+	}
+
+	@include media(">=desktop") {
+		&--active:hover {
+			padding-bottom: 1rem;
+			border-bottom: 3px solid rgb(255, 255, 255, 0.5);
+		}
+	}
+}
+
+.navigation {
+	margin: 0.2rem;
+	padding: 1.5rem 3rem 0;
+	background: rgba(255, 255, 255, 0.04);
+	backdrop-filter: blur(40px);
+
+	@include media(">=desktop") {
+		padding: 1.5rem 10rem 0;
+	}
+
+	&__links {
+		display: flex;
+		gap: 2rem;
+
+		&-link {
+			@include media(">=desktop") {
+				display: flex;
+				gap: 0.5rem;
+			}
+
+			.subheading {
+				text-transform: uppercase;
+				letter-spacing: 2.3625px;
+				color: rgb(255, 255, 255);
+
+				@include media(">=desktop") {
+					letter-spacing: 2.7px;
+				}
+			}
+
+			.page-number {
+				display: none;
+
+				@include media(">=desktop") {
+					display: block;
+					font-weight: bold;
+					letter-spacing: 4.7px;
+				}
+			}
+		}
+	}
+
+	.active {
+		padding-bottom: 1rem;
+		border-bottom: 3px solid white;
+	}
+}

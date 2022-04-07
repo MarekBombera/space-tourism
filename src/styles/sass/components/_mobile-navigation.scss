@@ -1,0 +1,36 @@
+.mobile-nav {
+	position: absolute;
+	width: 68%;
+	height: 100%;
+	top: 0;
+	right: 0;
+	backdrop-filter: blur(40px);
+	z-index: 999;
+
+	&__close-icon {
+		display: flex;
+		justify-content: flex-end;
+		margin: 2.25rem 1.7rem;
+	}
+
+	&__links {
+		display: flex;
+		flex-direction: column;
+		margin: 3rem 2rem;
+
+		&-link {
+			display: flex;
+			gap: 1rem;
+
+			.subheading {
+				text-transform: uppercase;
+				letter-spacing: 2.7px;
+				color: rgb(255, 255, 255);
+			}
+
+			.page-number {
+				font-weight: bold;
+			}
+		}
+	}
+}

@@ -1,0 +1,20 @@
+:root {
+	--dark-blue-color: rgb(12, 14, 24);
+	--light-blue-color: rgb(208, 214, 249);
+	--gray-blue-color: rgb(56, 59, 75);
+}
+
+.heading {
+	font-family: Bellefair;
+	color: rgb(255, 255, 255);
+}
+
+.subheading {
+	font-family: Barlow Condensed;
+	color: var(--light-blue-color);
+}
+
+.body {
+	font-family: Barlow;
+	color: var(--light-blue-color);
+}
